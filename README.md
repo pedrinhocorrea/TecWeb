@@ -10,10 +10,10 @@ O site foi criado para aplicar os conhecimentos de **HTML** e **CSS** que foram 
 
 **Estrutura de pastas:**
 
-TecnologiaWeb/
-├── index.html
-├── style.css          
-├── ReadMe.md          
+TecnologiaWeb/<br>
+├── index.html<br>
+├── style.css<br>
+├── ReadMe.md<br>
 └── imagens 
 
 
@@ -54,8 +54,10 @@ Projeto de uso educacional, criado como parte da disciplina **Tecnologia Web**.
 
 ## 🙋‍♂️ Desenvolvido por
 
-**Pedro Corrêa Marins**  
-Turma: Segundo semestre-matutino de Engemharia de Computação
-Email: pedrocorreamarins@gmail.com(pessoal) ou pm252880@alunos.unisanta.br(institucional)
+**Pedro Corrêa Marins** 
+
+Turma: Segundo semestre-matutino de Engemharia de Computação<br>
+Email: pedrocorreamarins@gmail.com(pessoal) ou pm252880@alunos.unisanta.br(institucional)<br>
 GitHub: https://github.com/pedrinhocorrea
+
 
