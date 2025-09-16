@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Corrêa Marins - Portfólio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.3) 0%, #000 100%);
+            padding: 2rem 1rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            z-index: 10;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 192px;
+            height: 192px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3b82f6;
+            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.2);
+            margin: 0 auto 2rem;
+            display: block;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .hero .name-highlight {
+            color: #60a5fa;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (min-width: 640px) {
+            .button-group {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 4rem;
+            }
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-outline {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #60a5fa;
+            border: 1px solid #3b82f6;
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-outline:hover {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .btn-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #fff;
+        }
+
+        .section-title .highlight {
+            color: #60a5fa;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #1e293b 0%, #000 100%);
+        }
+
+        .about-grid {
+            display: grid;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .about h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #60a5fa;
+            margin-bottom: 1rem;
+        }
+
+        .about p {
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background-color: rgba(0, 0, 0, 0.6);
+            border: 1px solid #374151;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        /* Projects Section */
+        .projects {
+            background-color: #000;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #1e293b 0%, #000 100%);
+            border: 1px solid #374151;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background-color: #2563eb;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #000 0%, #1e293b 100%);
+        }
+
+        .contact p {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 640px) {
+            .contact-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .social-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .contact-info {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid #374151;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .contact-info h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .contact-grid {
+            display: grid;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .contact-item p:first-child {
+            font-weight: 600;
+            color: #60a5fa;
+        }
+
+        .contact-item p:last-child {
+            color: #cbd5e1;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+            background-color: #2563eb;
+            color: white;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.25);
+        }
+
+        .scroll-to-top:hover {
+            background-color: #1d4ed8;
+        }
+
+        .scroll-to-top.show {
+            display: flex;
+        }
+
+        /* Icons */
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: currentColor;
+        }
+
+        .icon-small {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.125rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        footer p {
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul style="display: flex; gap: 2rem; list-style: none; justify-content: center;">
+                <li><a href="#inicio" class="btn btn-outline">Início</a></li>
+                <li><a href="#sobre" class="btn btn-outline">Sobre Mim</a></li>
+                <li><a href="#projetos" class="btn btn-outline">Projetos</a></li>
+                <li><a href="#contato" class="btn btn-outline">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <img 
+                    class="profile-image"
+                    src="imagens/Foto de perfil.jpg"
+                    alt="Foto de perfil"
+                />
+                
+                <h1>
+                    Olá, eu sou <span class="name-highlight">Pedro Corrêa Marins</span>
+                </h1>
+                
+                <p>
+                    Bem vindo ao meu portfólio profissional pessoal!
+                </p>
+                
+                <div class="button-group">
+                    <a href="#sobre" class="btn btn-primary">
+                        Sobre Mim
+                    </a>
+                    <a href="#projetos" class="btn btn-outline">
+                        Meus Projetos
+                    </a>
+                    <a href="#contato" class="btn btn-outline">
+                        Contato
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="section about">
+            <div class="container">
+                <h2 class="section-title">
+                    Sobre <span class="highlight">Mim</span>
+                </h2>
+                
+                <div class="about-grid">
+                    <div>
+                        <h3>Minha História</h3>
+                        <p>
+                            Desde fevereiro de 2025 curso Engenharia da Computação na Universidade Santa Cecília (Unisanta) e atuo como monitor no Núcleo de Pesquisa e Desenvolvimento em Eletrônica, com foco em pesquisa aplicada e inovação tecnológica.
+                        </p>
+                        <p>
+                            Acredito que engenheiros da computação serão cada vez mais requisitados por conta do desenvolvimento e implementação de tecnologia cada vez mais na sociedade atual, por esses fatores decidi escolher esta formação.
+                            Para auxiliar novos alunos e adquirir experiencia na área, atuo COMO monitor no Núcleo de Pesquisa e Desenvolvimento em Eletrônica(NPEMonitoria), onde auxilio alunos com dúvidas e dificuldades em suas atividades acadêmicas.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3>Habilidades</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">C++</div>
+                            <div class="skill-item">Arduino</div>
+                            <div class="skill-item">Oficina de solda</div>
+                            <div class="skill-item">Produção de placas</div>
+                            <div class="skill-item">Modelagem 3D</div>
+                            <div class="skill-item">HTML</div>
+                            <div class="skill-item">Mecatrônica</div>
+                            <div class="skill-item">Mecanica Automotiva</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projetos" class="section projects">
+            <div class="container">
+                <h2 class="section-title">
+                    Meus <span class="highlight">Projetos</span>
+                </h2>
+                
+                <!-- Adicionando uma lista ordenada dos projetos -->
+                <ol>
+                    <li>Casinha</li>
+                    <li>Agenda criptografada</li>
+                    <li>Ra-Tim-Bum</li>
+                </ol>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Casinha</h3>
+                        <p>Maquete com sistema eletrico e sensores</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Planta</span>
+                            <span class="tech-tag">3Ds</span>
+                            <span class="tech-tag">Sistema elétrico</span>
+                        </div>
+                        <a href="#" class="btn btn-outline" style="width: 100%;">
+                            <svg class="icon icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Ver Projeto
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Agenda criptografada</h3>
+                        <p>Aplicativo de gerenciamento de usiarios com proteção de dados</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Projeto</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Criptografia</span>
+                        </div>
+                        <a href="#" class="btn btn-outline" style="width: 100%;">
+                            <svg class="icon icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Ver Projeto
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Ra-Tim-Bum</h3>
+                        <p>Máquina de Golberg</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Tema</span>
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">Estrutura</span>
+                        </div>
+                        <a href="#" class="btn btn-outline" style="width: 100%;">
+                            <svg class="icon icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15,3 21,3 21,9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Ver Projeto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="section contact">
+            <div class="container">
+                <h2 class="section-title">
+                    Entre em <span class="highlight">Contato</span>
+                </h2>
+                
+                <p>
+                    Vamos conversar sobre seu próximo projeto!
+                </p>
+                
+                <div class="contact-buttons" style="display: flex; gap: 1rem; justify-content: center;">
+                    <!-- Botão GitHub -->
+                    <a href="https://github.com/pedrinhocorrea" target="_blank" class="btn btn-outline" title="GitHub">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.49 2.87 8.3 6.84 9.64.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.36-3.37-1.36-.45-1.17-1.1-1.48-1.1-1.48-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85.004 1.71.12 2.51.35 1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.07.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <!-- Botão LinkedIn -->
+                    <a href="https://www.linkedin.com/in/pedro-corrêa-marins-825a06367" target="_blank" class="btn btn-outline" title="LinkedIn">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-grid">
+                        <div class="contact-item">
+                            <p>Email</p>
+                            <p> pedrocorreamarins@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <p>Telefone</p>
+                            <p>Chama no zap</p>
+                        </div>
+                        <div class="contact-item">
+                            <p>Localização</p>
+                            <p>Santos, SP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Pedro Corrêa Marins. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5,12 12,5 19,12"></polyline>
+        </svg>
+    </button>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add loading animation to project cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe project cards for animation
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
