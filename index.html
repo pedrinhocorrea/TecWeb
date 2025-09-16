@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Metadados e link para o CSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Corrêa Marins - Portfólio</title>
@@ -8,6 +9,7 @@
 </head>
 <body>
     <header>
+        <!-- Menu de navegação principal -->
         <nav>
             <ul style="display: flex; gap: 2rem; list-style: none; justify-content: center;">
                 <li><a href="#inicio" class="btn btn-outline">Início</a></li>
@@ -18,23 +20,23 @@
         </nav>
     </header>
     <main>
-        <!-- Hero Section -->
+        <!-- Seção principal de apresentação (Hero) -->
         <section id="inicio" class="hero">
             <div class="hero-content">
+                <!-- Imagem de perfil -->
                 <img 
                     class="profile-image"
                     src="imagens/Foto de perfil.jpg"
                     alt="Foto de perfil"
                 />
-                
+                <!-- Título principal -->
                 <h1>
                     Olá, eu sou <span class="name-highlight">Pedro Corrêa Marins</span>
                 </h1>
-                
                 <p>
                     Bem vindo ao meu portfólio profissional pessoal!
                 </p>
-                
+                <!-- Botões de navegação rápida -->
                 <div class="button-group">
                     <a href="#sobre" class="btn btn-primary">
                         Sobre Mim
@@ -49,15 +51,16 @@
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- Seção Sobre Mim -->
         <section id="sobre" class="section about">
             <div class="container">
+                <!-- Título da seção -->
                 <h2 class="section-title">
                     Sobre <span class="highlight">Mim</span>
                 </h2>
-                
                 <div class="about-grid">
                     <div>
+                        <!-- Subtítulo e texto sobre a história -->
                         <h3>Minha História</h3>
                         <p>
                             Desde fevereiro de 2025 curso Engenharia da Computação na Universidade Santa Cecília (Unisanta) e atuo como monitor no Núcleo de Pesquisa e Desenvolvimento em Eletrônica, com foco em pesquisa aplicada e inovação tecnológica.
@@ -67,8 +70,8 @@
                             Para auxiliar novos alunos e adquirir experiencia na área, atuo COMO monitor no Núcleo de Pesquisa e Desenvolvimento em Eletrônica(NPEMonitoria), onde auxilio alunos com dúvidas e dificuldades em suas atividades acadêmicas.
                         </p>
                     </div>
-                    
                     <div>
+                        <!-- Subtítulo e lista de habilidades -->
                         <h3>Habilidades</h3>
                         <div class="skills-grid">
                             <div class="skill-item">C++</div>
@@ -85,14 +88,14 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Seção de Projetos -->
         <section id="projetos" class="section projects">
             <div class="container">
                 <h2 class="section-title">
                     Meus <span class="highlight">Projetos</span>
                 </h2>
-
                 <div class="projects-grid">
+                    <!-- Card do projeto Casinha -->
                     <div class="project-card">
                         <h3>Casinha</h3>
                         <p>Maquete com sistema eletrico e sensores</p>
@@ -101,7 +104,8 @@
                             <span class="tech-tag">3Ds</span>
                             <span class="tech-tag">Sistema elétrico</span>
                         </div>
-                        <a href="#" class="btn btn-outline" style="width: 100%;">
+                        <!-- Botão para visualizar o projeto -->
+                        <a href="casinha.html" class="btn btn-outline" style="width: 100%;">
                             <svg class="icon icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                 <polyline points="15,3 21,3 21,9"></polyline>
@@ -110,7 +114,7 @@
                             Ver Projeto
                         </a>
                     </div>
-
+                    <!-- Card do projeto Agenda criptografada -->
                     <div class="project-card">
                         <h3>Agenda criptografada</h3>
                         <p>Aplicativo de gerenciamento de usiarios com proteção de dados</p>
@@ -119,7 +123,8 @@
                             <span class="tech-tag">C++</span>
                             <span class="tech-tag">Criptografia</span>
                         </div>
-                        <a href="#" class="btn btn-outline" style="width: 100%;">
+                        <!-- Botão para visualizar o projeto -->
+                        <a href="agenda.html" class="btn btn-outline" style="width: 100%;">
                             <svg class="icon icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                 <polyline points="15,3 21,3 21,9"></polyline>
@@ -128,7 +133,7 @@
                             Ver Projeto
                         </a>
                     </div>
-
+                    <!-- Card do projeto Ra-Tim-Bum -->
                     <div class="project-card">
                         <h3>Ra-Tim-Bum</h3>
                         <p>Máquina de Golberg</p>
@@ -137,7 +142,8 @@
                             <span class="tech-tag">Arduino</span>
                             <span class="tech-tag">Estrutura</span>
                         </div>
-                        <a href="#" class="btn btn-outline" style="width: 100%;">
+                        <!-- Botão para visualizar o projeto -->
+                        <a href="ratimbum.html" class="btn btn-outline" style="width: 100%;">
                             <svg class="icon icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                 <polyline points="15,3 21,3 21,9"></polyline>
@@ -150,17 +156,17 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Seção de Contato -->
         <section id="contato" class="section contact">
             <div class="container">
                 <h2 class="section-title">
                     Entre em <span class="highlight">Contato</span>
                 </h2>
-                
+                <!-- Mensagem de convite ao contato -->
                 <p>
                     Vamos conversar sobre seu próximo projeto!
                 </p>
-                
+                <!-- Botões para redes sociais -->
                 <div class="contact-buttons" style="display: flex; gap: 1rem; justify-content: center;">
                     <a href="https://github.com/pedrinhocorrea" target="_blank" class="btn btn-outline" title="GitHub">
                         <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -177,7 +183,7 @@
                         LinkedIn
                     </a>
                 </div>
-                
+                <!-- Informações de contato -->
                 <div class="contact-info">
                     <h3>Informações de Contato</h3>
                     <div class="contact-grid">
@@ -198,17 +204,9 @@
             </div>
         </section>
     </main>
+    <!-- Rodapé do site -->
     <footer>
         <p>&copy; 2025 Pedro Corrêa Marins. Todos os direitos reservados.</p>
     </footer>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" class="scroll-to-top">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="12" y1="19" x2="12" y2="5"></line>
-            <polyline points="5,12 12,5 19,12"></polyline>
-        </svg>
-    </button>
 </body>
 </html>
-
