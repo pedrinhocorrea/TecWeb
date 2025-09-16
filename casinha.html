@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Define o padrão de caracteres para suportar acentuação e símbolos. -->
+    <meta charset="UTF-8"> 
+    <!-- Faz o site se ajustar para responsividade. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Projeto Casinha</title> 
+    <!-- Importa o arquivo CSS externo para estilizar a página. -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <main> 
+
+        <!-- Seção de introdução do projeto -->
+        <section class="project-intro section">
+            <!-- Centralização e organização do conteúdo -->
+            <div class="container"> 
+                <h1 class="section-title">Casinha <span class="highlight">Inteligente</span></h1> 
+
+                <p style="margin: 1.5rem 0; font-size: 1.35rem;">
+                    O projeto Casinha é uma maquete equipada com sistema elétrico, sensores e microcontrolador, desenvolvida para demonstrar automação residencial e conceitos de eletrônica. O objetivo é unir criatividade, engenharia e tecnologia em uma solução prática e educativa.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção com fotos do projeto -->
+        <section class="project-photos section">
+            <!-- Centralização e organização do conteúdo -->
+            <div class="container">
+                <h2 class="section-title">Fotos do <span class="highlight">Projeto</span></h2>
+
+                <!-- Container para organizar as imagens -->
+                <div class="projects-grid" style="justify-content:center;">
+                    <img src="imagens/casinha.jpg" alt="Foto da Casinha" 
+                         style="width:500px; height:350px; object-fit:cover; border-radius:16px; margin:1rem;">
+                    <img src="imagens/placa.jpg" alt="Foto da Placa do Projeto" 
+                         style="width:500px; height:350px; object-fit:cover; border-radius:16px; margin:1rem;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Botão de Voltar -->
+        <div class="container" style="text-align:center; margin: 2rem 0;">
+            <a href="index.html" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 6px; padding: 0.75rem 1.5rem; border-radius: 8px;">
+                <svg class="icon icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px; height:20px;">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                Voltar
+            </a>
+        </div>
+
+    </main>
+</body>
+</html>
