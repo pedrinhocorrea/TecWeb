@@ -42,7 +42,7 @@ TecnologiaWeb/
 
 ## 🔗 Acesso ao Projeto
 - Através do GitHub faça o download da pasta TecnologiaWeb e use a no VScode
-- **GitHub Page:** https://github.com/pedrinhocorrea
+- **GitHub Page:** https://pedrinhocorrea.github.io/TecWeb/
 
 ---
 
@@ -58,3 +58,4 @@ Projeto de uso educacional, criado como parte da disciplina **Tecnologia Web**.
 Turma: Segundo semestre-matutino de Engemharia de Computação
 Email: pedrocorreamarins@gmail.com(pessoal) ou pm252880@alunos.unisanta.br(institucional)
 GitHub: https://github.com/pedrinhocorrea
+
